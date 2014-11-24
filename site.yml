@@ -5,6 +5,7 @@
     - apt
     - ntp
     - vim
+    - nodejs
     # - security
     # - common
     # - java

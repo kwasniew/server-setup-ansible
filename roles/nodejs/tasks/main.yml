@@ -1,0 +1,10 @@
+---
+- name: Ensure nodejs installed
+  apt: pkg=nodejs state=installed
+  tags:
+    - nodejs
+
+- name: Ensure npm installed
+  apt: pkg=npm state=installed
+  tags:
+    - nodejs
