@@ -2,6 +2,7 @@
 - hosts: appservers
   serial: 1
   roles:
+    - apt
     - ntp
     # - security
     # - common
