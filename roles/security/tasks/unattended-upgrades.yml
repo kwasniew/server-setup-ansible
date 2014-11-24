@@ -1,0 +1,4 @@
+---
+- name: Enture Fail2Ban installed
+  apt: pkg=unattended-upgrades state=latest
+  sudo: yes

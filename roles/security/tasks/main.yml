@@ -1,5 +1,6 @@
 ---
 - include: fail2ban.yml tags=security
 - include: ssh.yml tags=security
+- include: unattended-upgrades.yml tags=security
 
 
