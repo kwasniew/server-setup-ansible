@@ -7,4 +7,6 @@ Sources:
 
 
 TODO:   
-* use packer and ansible to create base images (web, db, proxy)
+* use packer and ansible to create base images (web, db, proxy)  
+* setup CI and tests for ansible  
+* add logstash agent, add collectd, add statsd

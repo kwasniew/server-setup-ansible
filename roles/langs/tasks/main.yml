@@ -6,5 +6,8 @@
     - nodejs
     - npm
     - default-jdk
+    - maven
+    - ant
+    - gradle
   tags:
     - languages

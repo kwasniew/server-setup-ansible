@@ -1,4 +1,4 @@
 ---
-- name: Enture Fail2Ban installed
+- name: Ensure auto security updates
   apt: pkg=unattended-upgrades state=latest
   sudo: yes
