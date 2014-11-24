@@ -1,4 +1,5 @@
 - name: Ensure installed vim
+  sudo: yes
   apt:
     pkg=vim
     state=present

@@ -4,9 +4,9 @@
   roles:
     - apt
     - ntp
+    - security
     - vim
     - nodejs
-    # - security
     # - common
     # - java
     # - users

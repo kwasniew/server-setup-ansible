@@ -29,7 +29,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.inventory_path = "hosts"
       ansible.limit = "app.local"
       ansible.host_key_checking = "false"
-      ansible.sudo = true
     end
   end
 
