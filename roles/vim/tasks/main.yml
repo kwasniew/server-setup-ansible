@@ -1,0 +1,6 @@
+- name: Ensure installed vim
+  apt:
+    pkg=vim
+    state=present
+  tags:
+    - vim

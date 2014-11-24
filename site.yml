@@ -4,6 +4,7 @@
   roles:
     - apt
     - ntp
+    - vim
     # - security
     # - common
     # - java
