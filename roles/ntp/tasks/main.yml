@@ -1,0 +1,5 @@
+---
+- name: Ensure NTP (for time synchronization) is installed
+  apt: pkg=ntp state=installed
+- name: Ensure NTP is running
+  service: name=ntp state=started enabled=yes

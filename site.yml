@@ -1,0 +1,11 @@
+---
+- hosts: appservers
+  serial: 1
+  roles:
+    - ntp
+    # - security
+    # - common
+    # - java
+    # - users
+    # - app
+
