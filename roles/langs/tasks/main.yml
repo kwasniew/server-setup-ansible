@@ -1,0 +1,10 @@
+---
+- name: Ensure programming languages installed
+  apt: pkg={{ item }} state=latest
+  sudo: yes
+  with_items:
+    - nodejs
+    - npm
+    - default-jdk
+  tags:
+    - languages
