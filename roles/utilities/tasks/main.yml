@@ -1,0 +1,10 @@
+- name: install packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - git
+    - vim
+    - tree
+    - curl
+  tags:
+    - utilities
