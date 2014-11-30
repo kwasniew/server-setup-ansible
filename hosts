@@ -2,3 +2,6 @@
 [appservers]
 app.local
 
+[digitalocean]
+178.62.98.149
+

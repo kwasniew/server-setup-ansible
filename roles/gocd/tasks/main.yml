@@ -1,0 +1,14 @@
+---
+- name: thoughtworks go apt repository
+  sudo: yes
+  apt_repository: repo='deb http://dl.bintray.com/gocd/gocd-deb/ /' state=present
+
+- name: apt install go-server
+  sudo: yes
+  apt: pkg=go-server=14.2.0-377 state=present force=yes
+
+- name: start go-server
+  sudo: yes
+  service: name=go-server state=started
+  notify:
+     - ensure go-server running
