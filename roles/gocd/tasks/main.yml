@@ -12,3 +12,11 @@
   service: name=go-server state=started
   notify:
      - ensure go-server running
+
+- name: apt install go-agent
+  sudo: yes
+  apt: pkg=go-agent=14.2.0-377 state=present force=yes
+
+- name: start go-agent
+  sudo: yes
+  service: name=go-agent state=started
