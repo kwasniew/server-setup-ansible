@@ -3,5 +3,12 @@
 app.local
 
 [digitalocean]
-104.236.36.136
+178.62.21.104
+
+[digitalocean:vars]
+DEFAULT_USER=kwasniew
+DEFAULT_USERID=5000
+DEFAULT_GROUP=kwasniew
+DEFAULT_GROUPID=5000
+LOCAL_AUTHORIZED_KEY="~/.ssh/id_rsa.pub"
 

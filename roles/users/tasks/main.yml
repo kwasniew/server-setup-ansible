@@ -1,0 +1,11 @@
+---
+- name: "add default group"
+  sudo: yes
+  group: gid={{ DEFAULT_GROUPID }} name={{ DEFAULT_GROUP }} state=present
+
+- name: "add default user with home directory"
+  sudo: yes
+  user: name={{ DEFAULT_USER }} comment="Default User" uid={{ DEFAULT_USERID }} group={{ DEFAULT_GROUP }} groups="sudo" home=/home/{{ DEFAULT_USER }} password={{ DEFAULT_PASSWORD }}
+
+- name: add authorized key
+  authorized_key: user={{ DEFAULT_USER }} key="{{ lookup('file', LOCAL_AUTHORIZED_KEY )}}"

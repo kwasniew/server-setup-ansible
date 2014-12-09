@@ -1,13 +1,23 @@
 ---
 - hosts: digitalocean
   serial: 1
+
+  vars_prompt:
+    - name: "DEFAULT_PASSWORD"
+      prompt: "Enter default user password"
+      private: yes
+      encrypt: "sha512_crypt"
+      confirm: yes
+      salt_size: 7
+
   roles:
     - apt
-    - ntp
+    # - ntp
     - security
     - utilities
-    - langs
-    - gocd
+    - users
+    # - langs
+    # - gocd
     # - common
     # - java
     # - users

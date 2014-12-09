@@ -2,12 +2,23 @@
 - name: Allow ssh through firewall
   sudo: yes
   ufw: proto=tcp port=22 rule=allow
+
 - name: Allow ssh through firewall (vagrant)
   sudo: yes
   ufw: proto=tcp port=2222 rule=allow
-- name: Allow gocd
+
+- name: Allow HTTP through firewall
   sudo: yes
-  ufw: proto=tcp port=8153 rule=allow
-- name: Set ufw policy
+  ufw: proto=tcp port=80 rule=allow
+
+- name: Allow HTTPS through firewall
+  sudo: yes
+  ufw: proto=tcp port=443 rule=allow
+
+- name: Set default ufw policy for incoming
   sudo: yes
   ufw: state=enabled direction=incoming policy=deny
+
+- name: Set default ufw policy for outgoing
+  sudo: yes
+  ufw: state=enabled direction=outgoing policy=allow

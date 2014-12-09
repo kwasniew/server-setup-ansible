@@ -2,9 +2,15 @@
   sudo: yes
   apt: pkg={{ item }} state=latest
   with_items:
+    - curl
+    - wget
+    - unzip
     - git
+    - ack-grep
+    - htop
     - vim
     - tree
-    - curl
+    - tmux
+    - software-properties-common
   tags:
     - utilities
