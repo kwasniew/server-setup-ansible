@@ -2,3 +2,6 @@
 - name: Ensure auto security updates
   apt: pkg=unattended-upgrades state=latest
   sudo: yes
+
+- name: Ensure periodic updates
+  copy: src=02periodic dest=/etc/apt/apt.conf.d/02periodic owner={{ DEFAULT_USER }} group={{ DEFAULT_GROUP }} mode=0644
